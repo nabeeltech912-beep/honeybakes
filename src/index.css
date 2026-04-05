@@ -881,6 +881,23 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 4%;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+  }
+  
+  .nav-actions {
+    gap: 0.6rem;
+  }
+
+  .nav-actions .cart-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;

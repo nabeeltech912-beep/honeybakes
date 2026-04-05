@@ -181,23 +181,23 @@ const App = () => {
         </ul>
         
         <div className="nav-actions">
-          <button className="cart-btn" style={{marginRight: '10px'}} aria-label="Toggle Dark Mode" onClick={() => setIsDarkMode(!isDarkMode)}>
+          <button className="cart-btn" aria-label="Toggle Dark Mode" onClick={() => setIsDarkMode(!isDarkMode)}>
             {isDarkMode ? <Sun size={22} /> : <Moon size={22} />}
           </button>
 
-          <button className="cart-btn" style={{marginRight: '10px'}} aria-label="Orders" onClick={() => token ? setIsOrdersModalOpen(true) : setIsAuthModalOpen(true)}>
+          <button className="cart-btn" aria-label="Orders" onClick={() => token ? setIsOrdersModalOpen(true) : setIsAuthModalOpen(true)}>
             <FileText size={22} />
           </button>
 
           {user ? (
-            <button className="cart-btn" style={{marginRight: '10px', color: '#E05A7E'}} aria-label="Logout" onClick={() => {
+            <button className="cart-btn" style={{color: '#E05A7E'}} aria-label="Logout" onClick={() => {
               localStorage.removeItem('token'); localStorage.removeItem('user');
               setToken(null); setUser(null); addToast('Logged out successfully');
             }} title={`Logout (${user.name})`}>
               <User size={22} />
             </button>
           ) : (
-            <button className="cart-btn" style={{marginRight: '10px'}} aria-label="Login" onClick={() => setIsAuthModalOpen(true)}>
+            <button className="cart-btn" aria-label="Login" onClick={() => setIsAuthModalOpen(true)}>
               <LogIn size={22} />
             </button>
           )}
